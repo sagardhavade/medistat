@@ -8026,6 +8026,30 @@ input[type=radio] {
   height: 50px;
 }
 
+/* vision Mission Goal */
+    /* Basic card styles */
+    .card {
+      display: inline-block; /* Display cards in a row */
+      width: 400px;
+      height: 610px;
+      border: 2px solid #ccc;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+      background-color: #ffffff;
+  }
+
+  /* Style the titles */
+  /* .card h2 {
+      color: #333;
+  } */
+
+  /* Style the descriptions */
+  /* .card p {
+      color: #666;
+  } */
+
 @media (min-width: 1500px) {
   .work-process .carousel-container {
     margin-right: -200px;
