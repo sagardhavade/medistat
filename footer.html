@@ -81,6 +81,11 @@
                 <li>
                   <span class="day">Sunday</span><span class="time">Day off</span>
                 </li>
+                <li>
+                  <a href="https://api.whatsapp.com/send?phone=8380055452" target="_blank">
+                    <img src="assets/images/icons/whatsapp.webp" alt="WhatsApp">
+                  </a>
+                </li>
               </ul>
               <div class="d-flex align-items-center">
                 <a href="contact-us.html" class="btn btn-primary btn-block">
@@ -120,3 +125,32 @@
       </div><!-- /.container -->
     </div><!-- /.footer-secondary -->
   </footer><!-- /.Footer -->
+  <div class="whatsapp-button">
+    <a href="https://api.whatsapp.com/send?phone=254787761880" target="_blank">
+    <img src="assets/images/icons/whatsapp.webp" height="50px" width="50px" alt="WhatsApp">
+  </a>
+  </div>
+  <style>
+
+
+    /* WhatsApp button styling */
+.whatsapp-button {
+  position: fixed;
+  bottom: 100px;
+  right: 35px;
+  z-index: 1000;
+}
+
+/* Make the button responsive */
+@media (max-width: 768px) {
+  .whatsapp-button {
+      bottom: 10px;
+      right: 10px;
+  }
+}
+
+/* Add hover effect (optional) */
+.whatsapp-button a:hover {
+  transform: scale(1.1);
+}
+  </style>
