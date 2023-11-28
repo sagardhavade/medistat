@@ -2,7 +2,7 @@
 <div id="head-container"></div>
 
 <body>
-   <div class="wrapper">
+  <div class="wrapper">
     <div class="preloader">
       <div class="loading"><span></span><span></span><span></span><span></span></div>
     </div><!-- /.preloader -->
@@ -25,9 +25,9 @@
               <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
                 <div class="slide-content">
                   <span class="slide-subtitle">Excellence, Dedicated, and Experienced Laboratory Technologists!</span>
-                  <h2 class="slide-title">Subtle Clinical & Laboratory Tests!</h2>
-                  <p class="slide-desc">We are continually harnessing our medical expertise to build best test offering
-                    while investing in technology to transform the delivery of health care.</p>
+                  <h2 class="slide-title">Your Path to Health: Reliable Solutions</h2>
+                  <p class="slide-desc">Trustworthy pathology diagnostics providing insights crucial for your health
+                    journey, ensuring reliable results for informed decisions.</p>
                   <div class="d-flex flex-wrap align-items-center">
                     <a href="tests-book-visit.html" class="btn btn-white btn-white-style2 mr-30">
                       <span>Book a Home Visit</span>
@@ -82,9 +82,9 @@
               <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
                 <div class="slide-content">
                   <span class="slide-subtitle">Excellence, Dedicated, and Experienced Laboratory Technologists!</span>
-                  <h2 class="slide-title">Quality Laboratory Testing Services!</h2>
-                  <p class="slide-desc">We are continually harnessing our medical expertise to build best test offering
-                    while investing in technology to transform the delivery of health care.</p>
+                  <h2 class="slide-title">Swift and Accurate Testing</h2>
+                  <p class="slide-desc">Rapid and precise pathology tests for timely diagnoses, supporting healthcare
+                    decisions with reliable results.</p>
                   <div class="d-flex flex-wrap align-items-center">
                     <a href="tests-book-visit.html" class="btn btn-white btn-white-style2 mr-30">
                       <span>Book a Home Visit</span>
@@ -181,7 +181,7 @@
                 impressive.</p>
               <div class="author-meta d-flex flex-wrap align-items-center mr-30">
                 <!-- <div class="author-img"> -->
-                  <!-- <img src="assets/images/testimonials/thumbs/7.jpg" alt="thumb"> -->
+                <!-- <img src="assets/images/testimonials/thumbs/7.jpg" alt="thumb"> -->
                 <!-- </div> -->
                 <div>
                   <h4 class="author-title">Rakesh Mune</h4>
@@ -206,7 +206,9 @@
             <div class="banner-text">
               <div class="heading-layout2 heading-light">
                 <h3 class="heading-title">Cutting-Edge Diagnostic Services</h3>
-                <p class="heading-desc font-weight-bold mb-40">At Medistat, we leverage advanced technology and a highly skilled team to deliver accurate and timely diagnostic services. Discover the future of healthcare with our state-of-the-art laboratory.
+                <p class="heading-desc font-weight-bold mb-40">At Medistat, we leverage advanced technology and a highly
+                  skilled team to deliver accurate and timely diagnostic services. Discover the future of healthcare
+                  with our state-of-the-art laboratory.
                 </p>
               </div>
               <div class="d-flex flex-wrap mb-90">
@@ -222,7 +224,8 @@
                   </div><!-- /.fancybox-icon -->
                   <div class="fancybox-body">
                     <h4 class="fancybox-title">Patient Information and Support</h4>
-                    <p class="fancybox-desc">From scheduling appointments to understanding the testing process, we provide you with the guidance and support you need for a seamless experience.</p>
+                    <p class="fancybox-desc">From scheduling appointments to understanding the testing process, we
+                      provide you with the guidance and support you need for a seamless experience.</p>
                   </div><!-- /.fancybox-body -->
                 </div><!-- /.fancybox-item -->
                 <div class="fancybox-item">
@@ -231,7 +234,8 @@
                   </div><!-- /.fancybox-icon -->
                   <div class="fancybox-body">
                     <h4 class="fancybox-title">Contact Us for Inquiries</h4>
-                    <p class="fancybox-desc">Reach out to our team through our contact form, phone, or email. We're here to assist you with any questions or concerns.</p>
+                    <p class="fancybox-desc">Reach out to our team through our contact form, phone, or email. We're here
+                      to assist you with any questions or concerns.</p>
                   </div><!-- /.fancybox-body -->
                 </div><!-- /.fancybox-item -->
               </div><!-- /.fancybox-layout2 -->
@@ -1120,7 +1124,7 @@
     <!-- ========================
       Footer
     ========================== -->
-   <div id="footer-container"></div>
+    <div id="footer-container"></div>
     <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
 
     <svg class="svg-pathes" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -1190,7 +1194,8 @@
 
   </div><!-- /.wrapper -->
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.5.1.min.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
   <script src="assets/js/plugins.js"></script>
   <script src="assets/js/main.js"></script>
 
@@ -1200,28 +1205,28 @@
     // Function to load the header and footer content
     function loadHeaderAndFooter() {
       // head
-        fetch('head.html')
+      fetch('head.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('head-container').innerHTML = data;
+          document.getElementById('head-container').innerHTML = data;
         });
-        // header
-        fetch('header.html')
+      // header
+      fetch('header.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('header-container').innerHTML = data;
+          document.getElementById('header-container').innerHTML = data;
         });
 
-        fetch('footer.html')
+      fetch('footer.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('footer-container').innerHTML = data;
+          document.getElementById('footer-container').innerHTML = data;
         });
     }
-    
+
     // Call the function to load the content
     loadHeaderAndFooter();
-</script>
+  </script>
 </body>
 
 </html>
