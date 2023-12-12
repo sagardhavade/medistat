@@ -12,7 +12,7 @@
     <!-- =========================
         Header
     =========================== -->
-  <div id="header-container"></div>
+    <div id="header-container"></div>
 
     <!-- ========================= 
             Google Map
@@ -23,7 +23,7 @@
       <div class="map-container">
         <div class="contact-panel p-0">
           <div class="panel-header">
-            <h3 class="panel-title color-white mb-0">Offices and  Labs</h3>
+            <h3 class="panel-title color-white mb-0">Offices and Labs</h3>
           </div>
           <div class="accordion" id="accordion">
             <div class="accordion-item opened">
@@ -34,7 +34,8 @@
                 <div class="accordion-body">
                   <ul class="contact-list list-unstyled mb-0">
                     <li>Phone: 0787761880</li>
-                    <li>Email: <a href="mailto:Medistatafrica@gmail.com" class="__cf_email__" data-cfemail="9bcbe9f4edfeefeffadbacf4e9f4f4fdb5f8f4f6">[Medistatafrica@gmail.com]</a></li>
+                    <li>Email: <a href="mailto:Medistatafrica@gmail.com" class="__cf_email__"
+                        data-cfemail="9bcbe9f4edfeefeffadbacf4e9f4f4fdb5f8f4f6">[Medistatafrica@gmail.com]</a></li>
                     <li>Address: Shop no.2 , Nirkav Park 3rd Parklands Avenue, Nairobi,Kenya</li>
                     <li>Hours: Mon-Fri: 7:30am – 5pm</li>
                   </ul>
@@ -489,37 +490,38 @@
 
   </div><!-- /.wrapper -->
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.5.1.min.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
   <script src="assets/js/plugins.js"></script>
   <script src="assets/js/main.js"></script>
 
 
-     <!-- including fetching -->
-     <script>
-      // Function to load the header and footer content
-      function loadHeaderAndFooter() {
-        // head
-          fetch('head.html')
-          .then(response => response.text())
-          .then(data => {
-              document.getElementById('head-container').innerHTML = data;
-          });
-          // header
-          fetch('header.html')
-          .then(response => response.text())
-          .then(data => {
-              document.getElementById('header-container').innerHTML = data;
-          });
-  
-          fetch('footer.html')
-          .then(response => response.text())
-          .then(data => {
-              document.getElementById('footer-container').innerHTML = data;
-          });
-      }
-      
-      // Call the function to load the content
-      loadHeaderAndFooter();
+  <!-- including fetching -->
+  <script>
+    // Function to load the header and footer content
+    function loadHeaderAndFooter() {
+      // head
+      fetch('head.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('head-container').innerHTML = data;
+        });
+      // header
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-container').innerHTML = data;
+        });
+
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        });
+    }
+
+    // Call the function to load the content
+    loadHeaderAndFooter();
   </script>
 </body>
 
