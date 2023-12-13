@@ -70,21 +70,21 @@ app.post("/sendmail", (req, res) => {
     from: "tcpltechsp@gmail.com",
     to: "tcpltechsp@gmail.com",
     subject: "Enquiry",
-    // html: `<p>First Name: ${name} <br>
-    //     Last name : ${lname}<br>
-    //     Email : ${email}<br>
-    //     Phone : ${phone}<br>
+    html: `<p>First Name: ${name} <br>
+       
+        Email : ${email}<br>
+        Phone : ${phone}<br>
 
-    //     Message : ${message}<br>
+        Message : ${message}<br>
 
-    //     </p>`,
-    html: `<p>Name: ${name} <br>
-    
-    Phone : ${phone}<br>  
-   
-    Message : ${message}<br>  
+        </p>`,
+    // html: `<p>Name: ${name} <br>
 
-    </p>`,
+    // Phone : ${phone}<br>
+
+    // Message : ${message}<br>
+
+    // </p>`,
   };
   transporter.sendMail(options, function (error, info) {
     if (error) {

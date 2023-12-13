@@ -66,23 +66,25 @@
         <!-- <div class="col-lg-8 col-md-10"> -->
         <h3 class="text-primary center">OTP Verification</h3>
         <div class="row form">
-          <div class="col-auto">
+          <div class="col-md-12">
+            <input type="text" name="name" class="form-control name" id="nameInput" placeholder="Enter your name"
+              required>
+            <input type="tel" name="phone" class="form-control phone" id="phoneInput"
+              placeholder="Enter your phone number" required>
             <input type="email" class="form-control email" placeholder="Enter Email">
+            <!-- <textarea id="addressInput" placeholder="Enter your address"></textarea> -->
+            <textarea id="descriptionInput" class="form-control message" name="message"
+              placeholder="Enter a description"></textarea>
+            <!-- <button class="btn btn-primary" onclick="sendMail()">Submit</button> -->
+            <!-- <input type="email" class="form-control email" placeholder="Enter Email"> -->
           </div>
-          <div class="col-auto">
-            <button class="btn btn-primary" onclick="sendOTP()">Send OTP</button>
-          </div>
+          <!-- <div class="col-auto"> -->
+          <button class="btn btn-primary" onclick="sendMail()">Verify Email / Send OTP</button>
+          <!-- </div> -->
         </div>
         <div class="success text-success">
           OTP verified Success fully
-          <input type="text" name="name" class="form-control name" id="nameInput" placeholder="Enter your name"
-            required>
-          <input type="tel" name="phone" class="form-control phone" id="phoneInput"
-            placeholder="Enter your phone number" required>
-          <!-- <textarea id="addressInput" placeholder="Enter your address"></textarea> -->
-          <textarea id="descriptionInput" class="form-control message" name="message"
-            placeholder="Enter a description"></textarea>
-          <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+
         </div>
 
         <div class="verification">
@@ -176,6 +178,7 @@
                   successEle.style.display = 'block';
                   errorEle.style.display = 'none';
                   // sendMail();
+                  location.reload();
 
                 }
                 else {
@@ -191,9 +194,9 @@
 
 
 
-        function sendOTP() {
+        function sendOTP(email) {
 
-          email = emailEle.value;
+          // email = emailEle.value;
           if (regex.test(email)) {
             fetch('http://localhost:4000/sendotp', {
               method: "POST",
@@ -210,6 +213,7 @@
                     emailpartialEle.value = "***" + email.slice(3)
                     emailEle.value = '';
                     // sendMail(email);
+
 
                   }
                   else {
@@ -236,7 +240,7 @@
           // lname = lnameEle.value;
           phone = phoneEle.value;
           message = messageEle.value;
-          // email = emailEle.value;
+          email = emailEle.value;
           // email = saveOTPS[email1];
           // email = 'aas@gmail.com';
           if (regex.test(email)) {
@@ -245,7 +249,7 @@
               body: JSON.stringify({
                 "name": `${name}`,
                 // "lname": `${lname}`,
-                // "email": `${email}`,
+                "email": `${email}`,
                 "phone": `${phone}`,
                 "message": `${message}`
               }),
@@ -254,16 +258,10 @@
               .then(
                 (res) => {
                   if (res.status == 200) {
-                    // //    document.getElementById('showSM').innerHTML = 'Hey There';
-                    // verfEle.style.display = 'block';
-                    // successEle.style.display = 'Hey';
-                    // //     emailpartialEle.value = "***" + email.slice(3)
-                    // //     emailEle.value = ''
-                    // successEle.style.display = 'none';
-                    verfEle.style.display = 'none';
-                    successEle.style.display = 'none';
-                    errorEle.style.display = 'none';
-                    location.reload();
+                    verfEle.style.display = 'block';
+                    emailpartialEle.value = "***" + email.slice(3)
+                    emailEle.value = '';
+                    sendOTP(email);
                   }
                   else {
                     errorEle.style.display = 'block';
